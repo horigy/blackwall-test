@@ -1,0 +1,81 @@
+// тк мы к ним обращаемся везде ниже
+@import "utils/vars";
+@import "utils/reset";
+
+
+html {
+  line-height: $mainLineHeight;
+	font-size: $mainFontSize;
+	color: $mainFontColor;
+  height: 100%;
+}
+
+body {
+  font-family: $mainFont;
+	font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+*, *:before, *:after { box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+a {
+	text-decoration: none;
+}
+
+button {
+  border-radius: 6px;
+}
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section, .section {
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+
+.container {
+  width: 95%;
+  display: flex;
+  flex: 0 0 auto;
+  max-width: $desktopWidth;
+  margin: 0 auto;
+
+  @media screen and (max-width: 600px) {
+    width: 91.5%;
+  }
+}
+
+.left-container {
+  padding-left: 115px;
+
+  @media screen and (max-width: 1400px) {
+    padding-left: 90px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding-left: 60px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding-left: 0;
+  }
+}
+
